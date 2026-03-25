@@ -4,7 +4,7 @@ import Game from './components/Game';
 import SocialShare from './components/SocialShare';
 import CookieConsent from './components/CookieConsent';
 import LegalPage from './components/LegalPage';
-import { Copy, Users, Play, Bot, Moon, Sun, Monitor } from 'lucide-react';
+import { Copy, Users, Play, Bot, Moon, Sun, Monitor, ArrowLeft } from 'lucide-react';
 import { getTranslation, Language, languages } from './lib/i18n';
 import { getLegalTranslation } from './lib/i18n-legal';
 
@@ -289,6 +289,14 @@ export default function App() {
                   <Copy size={18} />
                 </button>
               </div>
+              
+              <button 
+                onClick={handleQuitGame}
+                className="flex items-center justify-center w-full gap-2 mt-6 px-4 py-3 bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 border border-stone-200 dark:border-stone-700 rounded-xl hover:bg-stone-200 dark:hover:bg-stone-700 transition font-medium"
+              >
+                <ArrowLeft size={18} />
+                {t.backStatus}
+              </button>
             </div>
           </div>
         )}
