@@ -2,8 +2,11 @@ import { useState, useEffect } from 'react';
 import { Peer } from 'peerjs';
 import Game from './components/Game';
 import SocialShare from './components/SocialShare';
+import CookieConsent from './components/CookieConsent';
+import LegalPage from './components/LegalPage';
 import { Copy, Users, Play, Bot, Moon, Sun, Monitor } from 'lucide-react';
 import { getTranslation, Language, languages } from './lib/i18n';
+import { getLegalTranslation } from './lib/i18n-legal';
 
 type Theme = 'light' | 'dark' | 'system';
 
@@ -17,6 +20,7 @@ export default function App() {
   const [error, setError] = useState<string>('');
   const [playerName, setPlayerName] = useState<string>('');
   const [isBotMode, setIsBotMode] = useState<boolean>(false);
+  const [currentView, setCurrentView] = useState<'home' | 'privacy' | 'terms'>('home');
 
   const [theme, setTheme] = useState<Theme>(() => {
     return (localStorage.getItem('theme') as Theme) || 'system';
@@ -148,8 +152,19 @@ export default function App() {
     return <Game connection={connection} isHost={isHost} playerName={playerName} isBotMode={isBotMode} onQuit={handleQuitGame} lang={lang} />;
   }
 
+  const legalT = getLegalTranslation(lang);
+
+  if (currentView !== 'home') {
+    return (
+      <div className="min-h-screen bg-stone-100 dark:bg-stone-950 p-4 font-sans transition-colors duration-300 flex flex-col items-center">
+        <LegalPage lang={lang} type={currentView} onBack={() => setCurrentView('home')} />
+        <CookieConsent lang={lang} />
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-stone-100 dark:bg-stone-950 flex flex-col items-center justify-center p-4 font-sans relative transition-colors duration-300">
+    <div className="min-h-screen bg-stone-100 dark:bg-stone-950 flex flex-col items-center p-4 font-sans relative transition-colors duration-300">
       {/* Top right controls */}
       <div className="absolute top-4 right-4 flex items-center gap-4">
         {/* Language Select */}
@@ -280,6 +295,32 @@ export default function App() {
 
         <SocialShare lang={lang} />
       </div>
+
+      {/* SEO Content Section */}
+      <div className="max-w-3xl w-full mx-auto mt-4 mb-16 space-y-8 text-stone-600 dark:text-stone-400">
+        <div className="bg-white dark:bg-stone-900/50 p-6 md:p-8 rounded-2xl border border-stone-200 dark:border-stone-800 shadow-sm text-left">
+          <h2 className="text-xl font-bold text-stone-800 dark:text-stone-200 mb-3">{legalT.seo1Title}</h2>
+          <p className="leading-relaxed mb-6">{legalT.seo1Text}</p>
+          
+          <h2 className="text-xl font-bold text-stone-800 dark:text-stone-200 mb-3">{legalT.seo2Title}</h2>
+          <p className="leading-relaxed">{legalT.seo2Text}</p>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="w-full py-6 mt-auto border-t border-stone-200 dark:border-stone-800/50 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-medium text-stone-500 dark:text-stone-500">
+        <button onClick={() => setCurrentView('privacy')} className="hover:text-stone-800 dark:hover:text-stone-300 transition-colors">
+          {legalT.footerPrivacy}
+        </button>
+        <button onClick={() => setCurrentView('terms')} className="hover:text-stone-800 dark:hover:text-stone-300 transition-colors">
+          {legalT.footerTerms}
+        </button>
+        <span className="cursor-default text-stone-400 dark:text-stone-600">
+          {legalT.footerCookies}
+        </span>
+      </footer>
+
+      <CookieConsent lang={lang} />
     </div>
   );
 }

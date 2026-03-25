@@ -1,0 +1,110 @@
+import { Language } from './i18n';
+
+export const legalTranslations = {
+  pt: {
+    cookieTitle: 'Consentimento de Cookies',
+    cookieText: 'Utilizamos cookies para personalizar conteúdo, apresentar anúncios relevantes (Google AdSense) e analisar o nosso tráfego. Ao continuar, concorda com a nossa política.',
+    accept: 'Aceitar',
+    decline: 'Recusar',
+    seo1Title: 'Como Jogar Damas Online',
+    seo1Text: 'Bem-vindo ao melhor jogo de Damas multiplayer! O objetivo é capturar todas as peças do adversário. As peças movem-se na diagonal e as capturas são obrigatórias. Chegue ao fim do tabuleiro para promover a sua peça a Dama.',
+    seo2Title: 'Estratégia e P2P',
+    seo2Text: 'Jogue instantaneamente com amigos através da nossa tecnologia P2P descentralizada sem qualquer atraso. Controle o centro do tabuleiro e não deixe as suas peças isoladas para garantir a vitória.',
+    footerPrivacy: 'Política de Privacidade',
+    footerTerms: 'Termos e Condições',
+    footerCookies: 'Política de Cookies',
+    privacyTitle: 'Política de Privacidade',
+    privacyText: 'A sua privacidade é importante. Este site não armazena dados pessoais nos nossos servidores. O jogo decorre em tempo real (Peer-to-peer). Utilizamos ferramentas de terceiros como o Google AdSense que recolhem cookies para anúncios personalizados. Ao usar o site, aceita a recolha de cookies não-pessoais de acordo com os padrões da UE (RGPD) e da Califórnia (CCPA).',
+    termsTitle: 'Termos e Condições',
+    termsText: 'O uso do Damas Online é totalmente gratuito. Não nos responsabilizamos por perdas de conexão, uma vez que o jogo opera de forma descentralizada. O uso comercial dos recursos ou tentativa de manipulação do código (batota) resultará na interrupção do serviço local.'
+  },
+  en: {
+    cookieTitle: 'Cookie Consent',
+    cookieText: 'We use cookies to personalize content, deliver relevant ads (Google AdSense), and analyze our traffic. By continuing, you agree to our policy.',
+    accept: 'Accept',
+    decline: 'Decline',
+    seo1Title: 'How to Play Checkers Online',
+    seo1Text: 'Welcome to the best multiplayer Checkers game! The goal is to capture all opponent pieces. Pieces move diagonally and captures are mandatory. Reach the opposite end to promote your piece to a King.',
+    seo2Title: 'Strategy and P2P',
+    seo2Text: 'Play instantly with friends through our seamless P2P technology. Control the center of the board and keep your pieces connected to ensure victory.',
+    footerPrivacy: 'Privacy Policy',
+    footerTerms: 'Terms and Conditions',
+    footerCookies: 'Cookie Policy',
+    privacyTitle: 'Privacy Policy',
+    privacyText: 'Your privacy matters. We do not store personal data on our servers. Gameplay is real-time Peer-to-peer. We use third-party services like Google AdSense which collect cookies for personalized ads. By using this site, you agree to non-personal cookie collection under EU (GDPR) and California (CCPA) standards.',
+    termsTitle: 'Terms and Conditions',
+    termsText: 'Checkers Online is completely free. We are not responsible for connection drops as the game operates decentrally. Commercial use or cheating attempts will result in local service disruption.'
+  },
+  es: {
+    cookieTitle: 'Consentimiento de Cookies',
+    cookieText: 'Utilizamos cookies para personalizar contenido, mostrar anuncios relevantes (Google AdSense) y analizar nuestro tráfico. Al continuar, aceptas nuestra política.',
+    accept: 'Aceptar',
+    decline: 'Rechazar',
+    seo1Title: 'Cómo Jugar a las Damas Online',
+    seo1Text: '¡Bienvenido al mejor juego de Damas multijugador! El objetivo es capturar todas las fichas del oponente. Las piezas se mueven en diagonal y las capturas son obligatorias. Llega al extremo opuesto para coronar tu pieza como Reina.',
+    seo2Title: 'Estrategia y P2P',
+    seo2Text: 'Juega al instante con amigos gracias a nuestra tecnología P2P sin lag. Controla el centro del tablero y mantén tus fichas conectadas para asegurar la victoria.',
+    footerPrivacy: 'Política de Privacidad',
+    footerTerms: 'Términos y Condiciones',
+    footerCookies: 'Política de Cookies',
+    privacyTitle: 'Política de Privacidad',
+    privacyText: 'Tu privacidad es importante. No almacenamos datos personales en nuestros servidores. El juego se desarrolla en tiempo real (P2P). Usamos herramientas como Google AdSense que recopilan cookies para anuncios personalizados. Al usar este sitio, aceptas la política de cookies acorde al RGPD europeo.',
+    termsTitle: 'Términos y Condiciones',
+    termsText: 'Damas Online es totalmente gratuito. No nos responsabilizamos por caídas de conexión debido a la naturaleza descentralizada del juego. El uso de trampas resultará en el bloqueo local del servicio.'
+  },
+  fr: {
+    cookieTitle: 'Consentement aux Cookies',
+    cookieText: 'Nous utilisons des cookies pour personnaliser le contenu, diffuser des annonces pertinentes (Google AdSense) et analyser notre trafic. En continuant, vous acceptez notre politique.',
+    accept: 'Accepter',
+    decline: 'Refuser',
+    seo1Title: 'Comment Jouer aux Dames en Ligne',
+    seo1Text: 'Bienvenue dans le meilleur jeu de Dames multijoueur ! Le but est de capturer toutes les pièces de l\'adversaire. Atteignez le bout du plateau pour promouvoir votre pièce en Dame.',
+    seo2Title: 'Stratégie et P2P',
+    seo2Text: 'Jouez instantanément avec vos amis grâce à notre technologie P2P sans latence. Contrôlez le centre du plateau pour vous assurer la victoire.',
+    footerPrivacy: 'Politique de Confidentialité',
+    footerTerms: 'Conditions Générales',
+    footerCookies: 'Politique relative aux Cookies',
+    privacyTitle: 'Politique de Confidentialité',
+    privacyText: 'Votre vie privée compte. Nous ne stockons pas de données personnelles. Le jeu est en temps réel (Peer-to-peer). Nous utilisons Google AdSense qui collecte des cookies pour les annonces. En utilisant ce site, vous acceptez la collecte de cookies non personnels selon le RGPD.',
+    termsTitle: 'Conditions Générales',
+    termsText: 'Jeu de Dames en Ligne est gratuit. Nous ne sommes pas responsables des déconnexions. La triche entraînera une suspension locale.'
+  },
+  de: {
+    cookieTitle: 'Cookie-Zustimmung',
+    cookieText: 'Wir verwenden Cookies zur Personalisierung von Inhalten und Anzeigen (Google AdSense) sowie zur Analyse unseres Traffics. Durch die weitere Nutzung stimmen Sie unserer Richtlinie zu.',
+    accept: 'Akzeptieren',
+    decline: 'Ablehnen',
+    seo1Title: 'Wie man Dame Online spielt',
+    seo1Text: 'Willkommen beim besten Multiplayer-Dame-Spiel! Ziel ist es, alle gegnerischen Figuren zu schlagen. Figuren bewegen sich diagonal und das Schlagen ist Pflicht. Erreichen Sie das andere Ende, um Ihre Figur zur Dame zu machen.',
+    seo2Title: 'Strategie und P2P',
+    seo2Text: 'Spielen Sie sofort mit Freunden über unsere P2P-Technologie. Kontrollieren Sie das Zentrum des Bretts, um den Sieg zu sichern.',
+    footerPrivacy: 'Datenschutzrichtlinie',
+    footerTerms: 'Allgemeine Geschäftsbedingungen',
+    footerCookies: 'Cookie-Richtlinie',
+    privacyTitle: 'Datenschutzrichtlinie',
+    privacyText: 'Ihre Privatsphäre ist uns wichtig. Wir speichern keine persönlichen Daten. Wir verwenden Google AdSense, das Cookies für personalisierte Anzeigen sammelt. Sie stimmen der Cookie-Richtlinie gemäß DSGVO zu.',
+    termsTitle: 'Allgemeine Geschäftsbedingungen',
+    termsText: 'Dame Online ist völlig kostenlos. Wir haften nicht für Verbindungsabbrüche. Cheaten führt zur Sperrung des Dienstes.'
+  },
+  pl: {
+    cookieTitle: 'Zgoda na Pliki Cookie',
+    cookieText: 'Używamy plików cookie do personalizacji treści, wyświetlania reklam (Google AdSense) i analizy ruchu. Kontynuując, akceptujesz naszą politykę.',
+    accept: 'Akceptuj',
+    decline: 'Odrzuć',
+    seo1Title: 'Jak Grać w Warcaby Online',
+    seo1Text: 'Witamy w najlepszej wieloosobowej grze w Warcaby! Celem jest zbicie wszystkich pionków przeciwnika. Zdobądź przeciwny koniec planszy, aby promować swój pionek na damkę.',
+    seo2Title: 'Strategia i P2P',
+    seo2Text: 'Graj natychmiast ze znajomymi dzięki technologii P2P. Kontroluj środek planszy, aby zapewnić sobie zwycięstwo.',
+    footerPrivacy: 'Polityka Prywatności',
+    footerTerms: 'Zasady i Warunki',
+    footerCookies: 'Polityka Plików Cookie',
+    privacyTitle: 'Polityka Prywatności',
+    privacyText: 'Twoja prywatność jest ważna. Nie przechowujemy danych osobowych. Używamy Google AdSense, które zbiera pliki cookie w celach reklamowych. Akceptujesz standardy RODO.',
+    termsTitle: 'Zasady i Warunki',
+    termsText: 'Warcaby Online są bezpłatne. Nie ponosimy odpowiedzialności za przerwanie połączenia. Oszukiwanie spowoduje lokalne zawieszenie.'
+  }
+};
+
+export function getLegalTranslation(lang: Language) {
+  return legalTranslations[lang] || legalTranslations.en;
+}
