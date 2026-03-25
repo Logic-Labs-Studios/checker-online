@@ -1,0 +1,5 @@
+{
+  "name": "Damas Online",
+  "description": "Jogo de damas multiplayer online usando P2P com PeerJS",
+  "requestFramePermissions": []
+}
