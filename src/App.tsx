@@ -189,7 +189,7 @@ export default function App() {
       <div className="max-w-md w-full bg-white dark:bg-stone-900 rounded-2xl shadow-xl p-8 space-y-8 border border-transparent dark:border-stone-800 transition-colors duration-300 my-8">
         <div className="text-center space-y-2">
           <img src="/logo.png" alt="Damas Online Logo" className="w-24 h-24 mx-auto drop-shadow-sm rounded-2xl mb-4 pointer-events-none" />
-          <h1 className="text-4xl font-bold text-stone-800 dark:text-stone-100 tracking-tight">{t.title}</h1>
+          <h1 className="text-5xl font-outfit font-extrabold text-stone-800 dark:text-stone-100 tracking-tight">{t.title}</h1>
           <p className="text-stone-500 dark:text-stone-400">{t.subtitle}</p>
         </div>
 

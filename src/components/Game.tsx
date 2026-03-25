@@ -310,7 +310,7 @@ export default function Game({ connection, isHost, playerName, isBotMode, onQuit
       
       {/* Top Banner with Quit button */}
       <div className="w-full max-w-5xl flex justify-between items-center bg-white dark:bg-stone-900 p-4 rounded-2xl shadow-sm border border-transparent dark:border-stone-800 transition-colors">
-        <h1 className="text-xl font-bold text-stone-800 dark:text-stone-100">{t.title}</h1>
+        <h1 className="text-2xl font-outfit font-extrabold text-stone-800 dark:text-stone-100 tracking-tight">{t.title}</h1>
         {onQuit && (
           <button 
             onClick={onQuit}
