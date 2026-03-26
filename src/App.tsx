@@ -166,7 +166,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-stone-100 dark:bg-stone-950 flex flex-col items-center p-4 font-sans relative transition-colors duration-300">
       {/* Top right controls */}
-      <div className="absolute top-4 right-4 flex items-center gap-4">
+      <div className="w-full max-w-md flex justify-end items-center gap-2 sm:gap-4 pt-4 pb-2 z-10 relative">
         {/* Language Select */}
         <select 
           value={lang} 
@@ -186,7 +186,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="max-w-md w-full bg-white dark:bg-stone-900 rounded-2xl shadow-xl p-8 space-y-8 border border-transparent dark:border-stone-800 transition-colors duration-300 my-8">
+      <div className="max-w-md w-full bg-white dark:bg-stone-900 rounded-2xl shadow-xl p-6 sm:p-8 space-y-6 sm:space-y-8 border border-transparent dark:border-stone-800 transition-colors duration-300 mb-8 mt-2">
         <div className="text-center space-y-2">
           <img src="/logo.png" alt="Damas Online Logo" className="w-24 h-24 mx-auto drop-shadow-sm rounded-2xl mb-4 pointer-events-none" />
           <h1 className="text-5xl font-outfit font-extrabold text-stone-800 dark:text-stone-100 tracking-tight">{t.title}</h1>
@@ -203,13 +203,13 @@ export default function App() {
           <div className="space-y-6">
             <div className="space-y-3">
               <label className="text-sm font-medium text-stone-700 dark:text-stone-300 block">{t.yourName}</label>
-              <input
-                type="text"
-                value={playerName}
-                onChange={(e) => setPlayerName(e.target.value)}
-                placeholder={t.enterName}
-                className="w-full px-4 py-3 border border-stone-200 dark:border-stone-700 dark:bg-stone-800 dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900 dark:focus:ring-stone-600 transition-all"
-              />
+                <input
+                  type="text"
+                  value={playerName}
+                  onChange={(e) => setPlayerName(e.target.value)}
+                  placeholder={t.enterName}
+                  className="w-full px-4 py-3 border border-stone-200 dark:border-stone-700 dark:bg-stone-800 dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900 dark:focus:ring-stone-600 transition-all text-base"
+                />
             </div>
 
             <div className="space-y-3">
@@ -243,18 +243,18 @@ export default function App() {
 
             <div className="space-y-3">
               <label className="text-sm font-medium text-stone-700 dark:text-stone-300 block">{t.joinExisting}</label>
-              <div className="flex gap-2">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <input
                   type="text"
                   value={joinId}
                   onChange={(e) => setJoinId(e.target.value)}
                   placeholder={t.roomId}
-                  className="flex-1 px-4 py-3 border border-stone-200 dark:border-stone-700 dark:bg-stone-800 dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900 dark:focus:ring-stone-600 transition-all"
+                  className="flex-1 min-w-0 px-4 py-3 border border-stone-200 dark:border-stone-700 dark:bg-stone-800 dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900 dark:focus:ring-stone-600 transition-all text-base"
                 />
                 <button
                   onClick={joinGame}
                   disabled={!joinId || !playerName.trim()}
-                  className="px-6 py-3 bg-stone-200 dark:bg-stone-700 hover:bg-stone-300 dark:hover:bg-stone-600 disabled:opacity-50 disabled:cursor-not-allowed text-stone-800 dark:text-white rounded-xl font-medium transition-colors"
+                  className="px-6 py-3 bg-stone-200 dark:bg-stone-700 hover:bg-stone-300 dark:hover:bg-stone-600 disabled:opacity-50 disabled:cursor-not-allowed text-stone-800 dark:text-white rounded-xl font-medium transition-colors whitespace-nowrap shrink-0"
                 >
                   {t.enter}
                 </button>
@@ -279,11 +279,11 @@ export default function App() {
                   type="text" 
                   readOnly 
                   value={`${window.location.origin}?room=${peerId}`}
-                  className="flex-1 bg-transparent text-sm text-stone-600 dark:text-stone-300 outline-none px-2"
+                  className="flex-1 min-w-0 bg-transparent text-sm text-stone-600 dark:text-stone-300 outline-none px-2"
                 />
                 <button 
                   onClick={copyLink}
-                  className="p-2 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-md transition-colors text-stone-600 dark:text-stone-400"
+                  className="p-2 shrink-0 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-md transition-colors text-stone-600 dark:text-stone-400"
                   title={t.copyLink}
                 >
                   <Copy size={18} />
