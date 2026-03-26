@@ -3,20 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://partner.googleadservices.com https://adservice.google.com https://www.googletagservices.com; style-src 'self' 'unsafe-inline'; connect-src 'self' wss://*.peerjs.com https://*.peerjs.com https://0.peerjs.com; img-src 'self' data: https:; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com; font-src 'self' https://fonts.gstatic.com;" />
+
     <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="canonical" href="https://damazonline.com/" />
+
     <title>Damas Online | Jogo Multiplayer P2P Gratuito</title>
     <meta name="description" content="Jogue o clássico jogo de Damas online e em tempo real. Crie uma sala, partilhe o link e desafie os seus amigos no navegador. Gratuito e sem registo." />
+    <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph / Meta -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://damazonline.com/" />
     <meta property="og:title" content="Damas Online | Jogue com Amigos" />
     <meta property="og:description" content="Jogue o clássico jogo de Damas online em tempo real. Crie a sua sala e partilhe o link para começar." />
-    <!-- TODO: Adiciona aqui o link (ex: /social-preview.jpg) se tiveres uma imagem exportada do jogo -->
-    <meta property="og:image" content="" /> 
+    <meta property="og:image" content="https://damazonline.com/preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Damas Online | Jogue com Amigos" />
+    <meta name="twitter:description" content="Jogue o clássico jogo de Damas online em tempo real com amigos. Gratuito e sem registo." />
+    <meta name="twitter:image" content="https://damazonline.com/preview.png" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

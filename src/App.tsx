@@ -4,7 +4,8 @@ import Game from './components/Game';
 import SocialShare from './components/SocialShare';
 import CookieConsent from './components/CookieConsent';
 import LegalPage from './components/LegalPage';
-import { Copy, Users, Play, Bot, Moon, Sun, Monitor, ArrowLeft } from 'lucide-react';
+import AdSenseAd from './components/AdSenseAd';
+import { Copy, Users, Bot, Moon, Sun, Monitor, ArrowLeft } from 'lucide-react';
 import { getTranslation, Language, languages } from './lib/i18n';
 import { getLegalTranslation } from './lib/i18n-legal';
 
@@ -186,6 +187,9 @@ export default function App() {
         </div>
       </div>
 
+      {/* AdSense — Top Banner */}
+      <AdSenseAd adSlot="1111111111" className="max-w-md w-full mb-2" />
+
       <div className="max-w-md w-full bg-white dark:bg-stone-900 rounded-2xl shadow-xl p-6 sm:p-8 space-y-6 sm:space-y-8 border border-transparent dark:border-stone-800 transition-colors duration-300 mb-8 mt-2">
         <div className="text-center space-y-2">
           <img src="/logo.png" alt="Damas Online Logo" className="w-24 h-24 mx-auto drop-shadow-sm rounded-2xl mb-4 pointer-events-none" />
@@ -304,12 +308,18 @@ export default function App() {
         <SocialShare lang={lang} />
       </div>
 
+      {/* AdSense — Mid Rectangle */}
+      <AdSenseAd adSlot="2222222222" className="max-w-md w-full my-2" />
+
       {/* SEO Content Section */}
       <div className="max-w-3xl w-full mx-auto mt-4 mb-16 space-y-8 text-stone-600 dark:text-stone-400">
         <div className="bg-white dark:bg-stone-900/50 p-6 md:p-8 rounded-2xl border border-stone-200 dark:border-stone-800 shadow-sm text-left">
           <h2 className="text-xl font-bold text-stone-800 dark:text-stone-200 mb-3">{legalT.seo1Title}</h2>
           <p className="leading-relaxed mb-6">{legalT.seo1Text}</p>
-          
+
+          {/* AdSense — In-Content */}
+          <AdSenseAd adSlot="3333333333" className="my-6" />
+
           <h2 className="text-xl font-bold text-stone-800 dark:text-stone-200 mb-3">{legalT.seo2Title}</h2>
           <p className="leading-relaxed">{legalT.seo2Text}</p>
         </div>
